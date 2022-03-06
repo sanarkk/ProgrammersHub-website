@@ -56,7 +56,7 @@ ROOT_URLCONF = 'programmers_hub.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/html'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
