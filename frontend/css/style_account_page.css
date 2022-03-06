@@ -1,0 +1,137 @@
+:root{
+    --header_footer: #2C2A2A;
+
+    --text-color: #ffffff;
+    --form-color: #C4C4C4;
+    --article-color: #575757b0;
+}
+
+body {
+    font-family: 'Pridi', serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--header_footer);
+    height: 123px;
+    width: 100%;
+}
+
+.header-text {
+    color: #ffffff;
+    flex-direction: row;
+    display: flex;
+}
+
+.header-main {
+    margin-right: 100px;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 45px;
+    margin-left: 200px;
+    font-size: 24px;
+    margin-right: 780px;
+}
+
+.header-menu {
+    margin-right: 50px;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 45px;
+    font-size: 24px;
+}
+
+.main-text {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 75px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.text-box {
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    top: 26%;
+    left: 12%;
+}
+
+.text-box-main {
+    font-size: 36px;
+    color: var(--text-color);
+}
+
+.text-box-second {
+    font-size: 24px;
+    text-align: left;
+    margin-top: 3%;
+    color: var(--text-color);
+    line-height: 210%;
+}
+
+.text-box-buttons {
+    width: 650px;
+    margin-top: 90px;
+    margin-left: 110px;
+}
+
+.button {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #2C2A2A;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 64px;
+    padding-right: 64px;
+    border-radius: 50px;
+    font-size: 24px;
+}
+
+.img-1 {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    top: 45.4%;
+    right: 10%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: var(--header_footer);
+    height: 181px;
+    width: 100%;
+    top: 81.3%;
+}
+
+.footer-main-text {
+    font-size: 36px;
+    color: var(--text-color);
+    margin-top: 40px;
+}
+
+.footer-slogan {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-top: 15px;
+}
+
+.footer-copyright {
+    margin-top: 15px;
+    color: var(--text-color);
+    font-size: 18px;
+}
