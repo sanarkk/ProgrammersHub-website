@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'programmers_hub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'programmers_hub',
-        'USER': 'hub_user',
-        'PASSWORD': 'sashatop2003',
+        'NAME': 'name',
+        'USER': 'username',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '',
     }
