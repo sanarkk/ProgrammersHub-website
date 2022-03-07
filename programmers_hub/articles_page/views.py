@@ -11,6 +11,6 @@ def redirect_view(request):
 
 
 def show_article(request, id):
-    articles = Article.objects.all()
+    articles = Article.objects.get(id=id)
     args = {'articles': articles}
     return render(request, 'article.html', args)
