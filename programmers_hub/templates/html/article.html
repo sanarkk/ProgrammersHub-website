@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style_articles_page.css' %}">
-    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'css/style_article.css' %}">
+    <title>{{ article.name }}</title>
 </head>
 <body  background="{% static 'images/background_1.png' %}">
+    {% for article in articles %}
     <header class="header">
         <div class="header-text">
             <a href="/html/articles_page.html" class="header-main">
@@ -33,25 +34,18 @@
         </div>
     </header>
     <div class="main-text">
-        Articles
+        {{ article.name }}
     </div>
         <div class="content">
-            {% for article in articles %}
-            <div class="statya">
                 <img src="{{ article.img.url }}" class="content-img">
-                <h2 class="content-name">
-                    {{ article.name }}
-                </h2>
                 <h4 class="content-describe">
-                    {{ article.mini_description }}
+                    {{ article.main_article|linebreaks }}
                 </h4>
-                <a href="{% url 'articless' article.pk %}" class="content-href">
-                    Read more...
+                <a href="{{ article.url }}" class="content-href">
+                    Watch on youtube
                 </a>
-            </div>
-            {% endfor %}
         </div>
-
+    {% endfor %}
     <footer class="footer">
         <h1 class="footer-main-text">
             ProgrammersHub
