@@ -11,7 +11,7 @@ def login_page_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('')
+            return redirect('articles')
         else:
             messages.success(request, "Invalid login or password")
             return redirect('login')

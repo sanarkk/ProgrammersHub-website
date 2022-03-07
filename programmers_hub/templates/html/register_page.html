@@ -23,8 +23,10 @@
         <div class="text-box-form">
             <form action="" method=POST>
                 {% csrf_token %}
+                <div style="font-size: 24px; line-height: 200%; color: white; border-radius: 100px;">
+                    {{ form.as_p }}<br>
+                </div>
 
-                {{ form.as_p }}<br>
                 <br><br>
                 {% if form.errors %}
                     There was an error with your form...
