@@ -28,4 +28,7 @@ urlpatterns = [
     path('login/', login_page_view, name='login'),
     path('register/', register_page_view, name='register'),
     path('articles/', redirect_view, name='articles')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

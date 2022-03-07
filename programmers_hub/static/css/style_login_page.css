@@ -69,9 +69,8 @@ html, body{
 .form {
     flex-direction: column;
     display: flex;
-    position: absolute;
     align-items: center;
-    left: 60%;
+    left: 17%;
 }
 
 .button {

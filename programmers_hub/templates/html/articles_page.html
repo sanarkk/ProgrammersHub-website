@@ -38,7 +38,7 @@
         <div class="content">
             {% for article in articles %}
             <div class="statya">
-                <img src="{% static 'images/image_2.png' %}" class="content-img">
+                <img src="{{ article.img.url }}" class="content-img">
                 <h2 class="content-name">
                     {{ article.name }}
                 </h2>
