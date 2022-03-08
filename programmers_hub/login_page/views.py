@@ -17,3 +17,7 @@ def login_page_view(request):
             return redirect('login')
     else:
         return render(request, 'login_page.html', {})
+
+def logout_view(request):
+    logout(request)
+    return redirect('main_page')

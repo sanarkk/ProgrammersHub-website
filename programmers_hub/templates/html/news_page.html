@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,45 +8,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style_news_page.css">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_articles_page.css' %}">
     <title>News</title>
 </head>
-<body background="/images/background_1.png">
+<body  background="{% static 'images/background_1.png' %}">
     <header class="header">
         <div class="header-text">
-            <a href="/html/articles_page.html" class="header-main">
+            <a href="{% url 'articles' %}" class="header-main">
                 ProgrammersHub
             </a>
-            <a href="/html/articles_page.html" class="header-menu">
+            <a href="{% url 'articles' %}" class="header-menu">
                 Articles
             </a>
-            <a href="/html/news_page.html" class="header-menu">
+            <a href="{% url 'news_page' %}" class="header-menu">
                 News
             </a>
-            <a href="/html/about_us_page.html" class="header-menu">
+            <a href="#" class="header-menu">
                 About us
             </a>
-            <a href="/html/account_page.html" class="header-menu">
-                My account
+            <a href="{% url 'logout' %}" class="header-menu">
+                Logout
             </a>
         </div>
     </header>
     <div class="main-text">
         News
     </div>
-    <div class="content">
-        <img src="/images/image_2.png" class="content-img">
-        <h2 class="content-name">
-            Article name
-        </h2>
-        <h4 class="content-describe">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi minima autem! Rerum tempora cum explicabo aperiam modi eaque cumque praesentium nostrum voluptas numquam illo sequi a doloremque, libero aliquid?
-        </h4>
-        <a href="#" class="content-href">
-            Read more...
-        </a>
-    </div>
+        <div class="content">
+            {% for new in news %}
+            <div class="statya">
+                <img src="{{ new.img.url }}" class="content-img">
+                <h2 class="content-name">
+                    {{ new.name }}
+                </h2>
+                <h4 class="content-describe">
+                    {{ new.mini_description }}
+                </h4>
+                <a href="{% url 'show_new' new.pk %}" class="content-href">
+                    Read more...
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
     <footer class="footer">
         <h1 class="footer-main-text">
             ProgrammersHub

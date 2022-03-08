@@ -57,7 +57,7 @@ html, body{
 
 .content {
     width: 95%;
-    height: 2000px;
+    height: 900px;
     display: flex;
     flex-direction: row;
     position: absolute;

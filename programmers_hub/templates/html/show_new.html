@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_article.css' %}">
-    <title>{{ articles.name }}</title>
+    <title>{{ news.name }}</title>
 </head>
 <body  background="{% static 'images/background_1.png' %}">
 
@@ -19,7 +19,7 @@
             <a href="/html/articles_page.html" class="header-main">
                 ProgrammersHub
             </a>
-            <a href="/html/articles_page.html" class="header-menu">
+            <a href="{% url 'articles' %}" class="header-menu">
                 Articles
             </a>
             <a href="/html/news_page.html" class="header-menu">
@@ -34,15 +34,15 @@
         </div>
     </header>
     <div class="main-text">
-        {{ articles.name }}
+        {{ news.name }}
     </div>
         <div class="content">
-                <img src="{{ articles.img.url }}" class="content-img">
+                <img src="{{ news.img.url }}" class="content-img">
                 <h4 class="content-describe">
-                    {{ articles.main_article|linebreaks }}
+                    {{ news.main_article|linebreaks }}
                 </h4>
-                <a href="{{ articles.url }}" class="content-href">
-                    Watch on youtube
+                <a href="{{ news.url }}" class="content-href">
+                    Link to full article
                 </a>
         </div>
 
