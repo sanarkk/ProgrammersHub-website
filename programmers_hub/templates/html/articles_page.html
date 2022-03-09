@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style_articles_page.css' %}">
     <title>Articles</title>
 </head>
-<body  background="{% static 'images/background_1.png' %}">
+<body background="{% static 'images/background_1.png' %}">
     <header class="header">
         <div class="header-text">
             <a href="{% url 'articles' %}" class="header-main">
@@ -24,7 +24,7 @@
             <a href="{% url 'news_page' %}" class="header-menu">
                 News
             </a>
-            <a href="#" class="header-menu">
+            <a href="{% url 'about_us' %}" class="header-menu">
                 About us
             </a>
             <a href="{% url 'logout' %}" class="header-menu">

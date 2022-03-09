@@ -16,16 +16,16 @@
 
     <header class="header">
         <div class="header-text">
-            <a href="/html/articles_page.html" class="header-main">
+            <a href="{% url 'articles' %}" class="header-main">
                 ProgrammersHub
             </a>
-            <a href="/html/articles_page.html" class="header-menu">
+            <a href="{% url 'articles' %}" class="header-menu">
                 Articles
             </a>
-            <a href="/html/news_page.html" class="header-menu">
+            <a href="{% url 'news_page' %}" class="header-menu">
                 News
             </a>
-            <a href="/html/about_us_page.html" class="header-menu">
+            <a href="{% url 'about_us' %}" class="header-menu">
                 About us
             </a>
             <a href="{% url 'logout' %}" class="header-menu">

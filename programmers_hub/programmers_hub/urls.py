@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.urls import path, include
 
+from about_us_page.views import about_us_view
 from account_page.views import account_page_view
 from main_page.views import main_page_view
 from login_page.views import login_page_view, logout_view
@@ -36,6 +37,7 @@ urlpatterns = [
     path('programmers_hub/account/', account_page_view, name='account_page'),
     path('programmers_hub/news/', news_page_view, name='news_page'),
     path('programmers_hub/news/<int:id>', show_new, name='show_new'),
+    path('programmers_hub/about-us/', about_us_view, name='about_us')
 ]
 
 if settings.DEBUG:
